@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Saisie d'adresse IP</title>
+    <style>
+        body{
+            background-image:url(x.jpeg);
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            height: 100vh; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            color: white; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="http://localhost:4567/process_ip" method="post">
+        <fieldset><legend>Entrer une adresse IP</legend>
+        <label for="ip">Adresse IP:</label>
+        <input type="text" id="ip" name="ip"><br><br>
+        <input type="submit" id="button" value="Soumettre">
+    </fieldset></form>
+</body>
+</html>

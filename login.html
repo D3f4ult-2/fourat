@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:url(x.jpeg);
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            height: 100vh; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            color: white; 
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm" action="main.html" method="post" onsubmit="return validateForm()">        <fieldset> <legend>Bienvenue</legend><br>
+    Cin : <input type="text" id="cin" name="i1"><br><br>
+    password : <input type="password" id="pass" name="i1"><br><br>
+    <input type="submit" id="b1" value="Connecter" src="main.html">
+    <input type="button" id="b2" value="Crée un compte"  onclick="redirectToLogin()">
+</fieldset></form>
+
+<script>
+    function validateForm() {
+        var cin = document.getElementById('cin').value.trim();
+        var password = document.getElementById('pass').value.trim();
+
+        if (cin === '' ||password === '') {
+            alert('Veuillez remplir tous les champs.');
+            return false; 
+        }
+        return true; 
+    }
+
+    function redirectToLogin() {
+            window.location.href = "inscrit.html";
+        }
+
+</script>
+</body>
+</html>

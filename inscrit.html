@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:url(a.jpg);
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            height: 100vh; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            color: white; 
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm" action="login.html" method="post" onsubmit="return validateForm()">
+        <fieldset>
+            <legend>Créer un compte !!</legend><br>
+            <div id="d1">
+                CIN : <input type="text" id="cin" name="i1" required><br><br>
+                Nom : <input type="text" id="nom" name="i1" required><br><br>
+                Prénom : <input type="text" id="pr" name="i1" required><br><br>
+                Email : <input type="email" id="email" name="i1" required><br><br>
+                Mot de passe : <input type="password" id="pass" name="i1" required><br><br>
+
+                <input type="submit" id="sbm" name="i1" value="Créer">
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        function validateForm() {
+            var cin = document.getElementById('cin').value.trim();
+            var nom = document.getElementById('nom').value.trim();
+            var prenom = document.getElementById('pr').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var password = document.getElementById('pass').value.trim();
+
+            if (cin === '' || nom === '' || prenom === '' || email === '' || password === '') {
+                alert('Veuillez remplir tous les champs.');
+                return false; 
+            }
+
+
+            return true;
+        }
+    </script>
+</body>
+</html>
